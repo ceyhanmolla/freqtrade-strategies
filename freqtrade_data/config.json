@@ -1,0 +1,132 @@
+{
+  "dry_run": true,
+  "dry_run_wallet": 100,
+  "max_open_trades": 6,
+  "stake_currency": "USDT",
+  "stake_amount": "unlimited",
+  "tradable_balance_ratio": 0.99,
+  "cancel_open_orders_on_exit": false,
+  "trading_mode": "futures",
+  "margin_mode": "isolated",
+  "timezone": "Europe/Berlin",
+  "strategy": "EwoMomentumV1F",
+  "force_entry_enable": true,
+  "position_adjustment_enable": true,
+  "initial_state": "stopped",
+  "dataformat_ohlcv": "feather",
+  "dataformat_trades": "feather",
+  "unfilledtimeout": {
+    "entry": 3,
+    "exit": 2,
+    "exit_timeout_count": 0,
+    "unit": "minutes"
+  },
+  "order_types": {
+    "entry": "limit",
+    "exit": "limit",
+    "emergency_exit": "limit",
+    "force_entry": "limit",
+    "force_exit": "limit",
+    "stoploss": "limit",
+    "stoploss_on_exchange": false,
+    "stoploss_on_exchange_interval": 60
+  },
+  "entry_pricing": {
+    "use_order_book": true,
+    "order_book_top": 1,
+    "check_depth_of_market": {
+      "enabled": false,
+      "bids_to_ask_delta": 1
+    }
+  },
+  "exit_pricing": {
+    "use_order_book": true,
+    "order_book_top": 1
+  },
+  "exchange": {
+    "name": "binance",
+    "key": "",
+    "secret": "",
+    "ccxt_config": {
+      "enableRateLimit": true,
+      "rateLimit": 60
+    },
+    "ccxt_async_config": {
+      "enableRateLimit": true,
+      "rateLimit": 60
+    },
+    "pair_whitelist": [
+      "BTC/USDT:USDT",
+      "ETH/USDT:USDT",
+      "XRP/USDT:USDT",
+      "SOL/USDT:USDT",
+      "TRX/USDT:USDT",
+      "DOGE/USDT:USDT",
+      "TON/USDT:USDT",
+      "ADA/USDT:USDT",
+      "ZEC/USDT:USDT",
+      "BCH/USDT:USDT",
+      "XMR/USDT:USDT",
+      "LINK/USDT:USDT",
+      "LTC/USDT:USDT",
+      "AVAX/USDT:USDT",
+      "HBAR/USDT:USDT",
+      "SUI/USDT:USDT",
+      "SHIB/USDT:USDT",
+      "TAO/USDT:USDT",
+      "UNI/USDT:USDT",
+      "DOT/USDT:USDT",
+      "NEAR/USDT:USDT",
+      "PEPE/USDT:USDT",
+      "ONDO/USDT:USDT",
+      "ICP/USDT:USDT",
+      "ETC/USDT:USDT",
+      "AAVE/USDT:USDT",
+      "ALGO/USDT:USDT",
+      "POL/USDT:USDT",
+      "ENA/USDT:USDT",
+      "RENDER/USDT:USDT",
+      "STX/USDT:USDT",
+      "MKR/USDT:USDT",
+      "ATOM/USDT:USDT",
+      "WLD/USDT:USDT",
+      "APT/USDT:USDT",
+      "FIL/USDT:USDT",
+      "ARB/USDT:USDT",
+      "VET/USDT:USDT",
+      "PENGU/USDT:USDT",
+      "DASH/USDT:USDT",
+      "BONK/USDT:USDT",
+      "VIRTUAL/USDT:USDT",
+      "FET/USDT:USDT",
+      "INJ/USDT:USDT",
+      "JUP/USDT:USDT",
+      "SEI/USDT:USDT",
+      "XTZ/USDT:USDT",
+      "OP/USDT:USDT",
+      "XLM/USDT:USDT",
+      "CRV/USDT:USDT"
+    ],
+    "pair_blacklist": []
+  },
+  "pairlists": [
+    {
+      "method": "StaticPairList"
+    },
+    {
+      "method": "FullTradesFilter"
+    },
+    {
+      "method": "SpreadFilter",
+      "max_spread_ratio": 0.005
+    },
+    {
+      "method": "VolumePairList",
+      "number_assets": 50,
+      "sort_key": "quoteVolume"
+    }
+  ],
+  "internals": {
+    "process_throttle_secs": 5
+  }
+}
