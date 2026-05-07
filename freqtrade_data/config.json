@@ -117,13 +117,14 @@
       "method": "FullTradesFilter"
     },
     {
-      "method": "SpreadFilter",
-      "max_spread_ratio": 0.005
+      "method": "SpreadFilter"
     },
     {
       "method": "VolumePairList",
-      "number_assets": 50,
-      "sort_key": "quoteVolume"
+      "number_assets": 20,
+      "sort_key": "quoteVolume",
+      "min_value": 0,
+      "refresh_period": 1800
     }
   ],
   "internals": {
