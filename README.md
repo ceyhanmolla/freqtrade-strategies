@@ -6,7 +6,7 @@ Backtested and optimized Freqtrade strategy collection.
 
 | Parameter | Value |
 |-----------|-------|
-| Freqtrade Version | **2024.9** (Docker) |
+| Freqtrade Version | **2026.4** (Docker, stable) |
 | Exchange | Binance Spot |
 | Start Balance | 100 USDT |
 | Stake | Unlimited (balance split equally) |
